@@ -1,0 +1,196 @@
+.footer {
+  width: 100%;
+  background-color: #bde0ff; /* pastel comic blue */
+  position: relative;
+  border-top: 4px solid #000; /* thick comic border */
+  font-family: "Bangers", sans-serif; /* comic font */
+}
+
+/* HERO */
+.footer__hero {
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 20px 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(rgba(0,0,0,0.12) 2px, transparent 2px),
+                    radial-gradient(rgba(0,0,0,0.12) 2px, transparent 2px);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}
+
+/* HERO IMAGES */
+.footer__hero-img {
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  z-index: 1;
+}
+
+.footer__hero-img--left {
+  left:  100px;
+  width: 200px;
+}
+
+.footer__hero-img--right {
+  right: 100px;
+  width: 200px;
+}
+
+/* HERO CONTENT */
+.footer__hero-content {
+  text-align: center;
+  max-width: 550px;
+  z-index: 10;
+}
+
+.footer__hero-content h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.footer__hero-content p {
+  font-size: 15px;
+  color: #111;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* EMAIL BOX */
+.footer__input-box {
+  width: 100%;
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+  border: 3px solid #000; /* comic border */
+}
+
+.footer__input-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  font-family: "Inter", sans-serif;
+}
+
+/* BUTTON */
+.footer__btn {
+  border: 4px solid #000; /* thick comic border */
+  padding: 14px 34px;
+  background: #ffde59; /* comic yellow */
+  color: #000;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.18);
+  transition: 0.2s;
+}
+
+.footer__btn:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+}
+
+/* BOTTOM SECTION */
+.footer__bottom {
+  width: 100%;
+  margin: 0 auto;
+  border-top: 4px solid #000; /* comic border */
+  padding: 100px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+ 
+}
+
+.footer__links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  font-size: 14px;
+  color: #111;
+}
+
+.footer__links li {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer__links li:hover {
+  color: #ff0000b2;
+  transform: scale(1.1);
+}
+
+/*--------------------------------------*/
+/* RESPONSIVE                           */
+/*--------------------------------------*/
+
+@media (max-width: 900px) {
+  .footer__hero {
+    padding: 80px 20px 100px;
+  }
+
+  .footer__hero-content h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__hero {
+    padding: 60px 20px 80px;
+  }
+  .footer__hero-img {
+    display: none;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 30px;
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  .footer__links {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__hero-content h2 {
+    font-size: 26px;
+  }
+
+  .footer__hero-content p {
+    font-size: 14px;
+  }
+
+  .footer__btn {
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  .footer__input-box {
+    padding: 14px 18px;
+  }
+
+  .footer__bottom {
+    padding: 50px 15px;
+  }
+}
