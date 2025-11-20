@@ -13,7 +13,7 @@ export const LoginPage = () => {
   return (
     <div className={styles.loginPage}>
       <div className={styles.loginBox}>
-        <h2 className={styles.title}>Welcome to ComicZone!</h2>
+        <h2 className={styles.title}>Welcome to ComicsBoxD!</h2>
         <p className={styles.subtitle}>Log in to continue your fun adventure!</p>
 
         <form className={styles.form} onSubmit={handleSubmit}>
