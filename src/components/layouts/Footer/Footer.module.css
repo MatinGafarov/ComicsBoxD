@@ -1,9 +1,9 @@
 .footer {
   width: 100%;
-  background-color: #bde0ff; /* pastel comic blue */
+  background-color: #bde0ff; 
   position: relative;
-  border-top: 4px solid #000; /* thick comic border */
-  font-family: "Bangers", sans-serif; /* comic font */
+  border-top: 4px solid #000; 
+  font-family: "Bangers", sans-serif; 
 }
 
 /* HERO */
