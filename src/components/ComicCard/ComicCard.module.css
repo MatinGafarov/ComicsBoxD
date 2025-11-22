@@ -1,0 +1,250 @@
+.card {
+  background-color: var(--comics-primary);
+  border: var(--comics-border-thick) solid var(--comics-secondary);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3), 
+              10px 10px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.02) 2px,
+      rgba(0, 0, 0, 0.02) 4px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.4), 
+              12px 12px 0px rgba(0, 0, 0, 0.15);
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: var(--comics-border-medium) solid var(--comics-secondary);
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 204, 0, 0.1) 0%, transparent 50%);
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: contrast(1.1) brightness(0.95);
+}
+
+.card:hover .cardImage img {
+  transform: scale(1.08) rotate(1deg);
+  filter: contrast(1.2) brightness(1);
+}
+
+.cardContent {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  margin: 0;
+  line-height: 1.2;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-shadow: 2px 2px 0px rgba(255, 204, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--comics-secondary);
+  font-weight: 900;
+}
+
+.author {
+  background-color: var(--comics-accent);
+  padding: 2px 6px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  transform: skewX(-5deg);
+}
+
+.year {
+  padding: 2px 6px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 204, 0, 0.2);
+  transform: skewX(-5deg);
+}
+
+.cardRating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-top: var(--comics-border-thin) dashed var(--comics-secondary);
+  border-bottom: var(--comics-border-thin) dashed var(--comics-secondary);
+  padding: 6px 0;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
+}
+
+.stars svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--comics-secondary);
+  stroke-width: 1.5;
+}
+
+.ratingValue {
+  font-weight: 900;
+  color: var(--comics-secondary);
+  font-size: 11px;
+  margin-left: auto;
+  background-color: var(--comics-accent);
+  padding: 2px 6px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.ratedCount {
+  font-size: 8px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardImage {
+    height: 180px;
+  }
+
+  .cardTitle {
+    font-size: 12px;
+  }
+
+  .cardContent {
+    padding: 10px;
+  }
+
+  .cardMeta {
+    font-size: 9px;
+    gap: 4px;
+  }
+
+  .author,
+  .year {
+    padding: 2px 4px;
+    font-size: 8px;
+  }
+
+  .ratingValue {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .ratedCount {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    border: var(--comics-border-medium) solid var(--comics-secondary);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2), 
+                6px 6px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3), 
+                8px 8px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .cardImage {
+    height: 150px;
+  }
+
+  .cardContent {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .cardTitle {
+    font-size: 11px;
+  }
+
+  .cardMeta {
+    font-size: 8px;
+    gap: 3px;
+  }
+
+  .author,
+  .year {
+    padding: 1px 3px;
+    font-size: 7px;
+  }
+
+  .cardRating {
+    gap: 4px;
+    padding: 4px 0;
+  }
+
+  .stars svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .ratingValue {
+    font-size: 9px;
+    padding: 1px 3px;
+  }
+
+  .ratedCount {
+    font-size: 6px;
+  }
+}

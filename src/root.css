@@ -1,0 +1,29 @@
+:root {
+  /* Comics Style Color Palette */
+  --comics-primary: #ffffff;
+  --comics-secondary: #000000;
+  --comics-accent: #ffcc00;
+  --comics-border-thick: 4px;
+  --comics-border-medium: 2px;
+  --comics-border-thin: 1px;
+  --comics-font-family: "Bangers", "Impact", "Arial Black", system-ui;
+  --comics-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+  --comics-inset-shadow: inset -3px -3px 0px rgba(0, 0, 0, 0.2);
+}
+
+html {
+  background-color: var(--comics-secondary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--comics-font-family);
+}
+
+.bangers-regular {
+  font-family: var(--comics-font-family);
+  font-weight: 400;
+  font-style: normal;
+}

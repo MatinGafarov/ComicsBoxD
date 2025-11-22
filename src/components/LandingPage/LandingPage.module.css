@@ -4,6 +4,10 @@
   overflow: hidden;
   position: relative;
   background-color: antiquewhite;
+  border-top: var(--comics-border-thick) solid var(--comics-secondary);
+  border-bottom: var(--comics-border-thick) solid var(--comics-secondary);
+  border-left: var(--comics-border-thick) solid var(--comics-secondary);
+  border-right: var(--comics-border-thick) solid var(--comics-secondary);
 }
 
 .bg {
@@ -14,7 +18,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  filter: brightness(0.9); /* blur yerinə sadə tündlük */
+  filter: brightness(0.9);
 }
 
 /* Yazı container */
@@ -29,6 +33,7 @@
   text-align: center;
   color: #fff;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  padding: 20px;
 }
 
 /* Başlıq */
@@ -36,6 +41,7 @@
   font-size: 64px;
   margin: 0;
   background: linear-gradient(45deg, #ff7f50, #ffdd00);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
@@ -48,4 +54,43 @@
   25% { transform: scale(1.1) rotate(-5deg); }
   50% { transform: scale(1.2) rotate(5deg); }
   75% { transform: scale(1.1) rotate(-3deg); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    height: 500px;
+  }
+
+  .hero__text h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+
+  .hero__text h1 {
+    font-size: 36px;
+  }
+
+  .hero__text {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 300px;
+  }
+
+  .hero__text h1 {
+    font-size: 24px;
+  }
+
+  .hero__text {
+    padding: 10px;
+  }
 }
