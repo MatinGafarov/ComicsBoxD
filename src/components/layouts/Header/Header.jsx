@@ -55,6 +55,9 @@ export const Header = () => {
             <li className={styles["navbar__item"]}>
               <Link to="/" className={handleNavbarClass("/")} onClick={closeMenu}>Home</Link>
             </li>
+              <li className={styles["navbar__item"]}>
+              <Link to="/comics" className={handleNavbarClass("/comics")} onClick={closeMenu}>Comics</Link>
+            </li>
             <li className={styles["navbar__item"]}>
               <Link to="/activity" className={handleNavbarClass("/activity")} onClick={closeMenu}>Activity</Link>
             </li>

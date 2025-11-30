@@ -1,0 +1,397 @@
+.comicsPageContainer {
+  width: 100%;
+  background: var(--comics-primary);
+  padding-top: 0;
+}
+
+/* Filter Section */
+.filterSection {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: var(--comics-border-thick) solid var(--comics-secondary);
+  padding: 25px 20px;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent);
+  background-size: 40px 40px;
+  background-color: var(--comics-primary);
+}
+
+.filterContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.browseLabel {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.filterGroup {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.filterItem {
+  flex: 0 0 auto;
+}
+
+.filterSelect,
+.searchInput {
+  background: var(--comics-primary);
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  cursor: pointer;
+  font-family: var(--comics-font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.filterSelect:hover,
+.searchInput:hover {
+  background: var(--comics-accent);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.filterSelect:focus,
+.searchInput:focus {
+  outline: none;
+  background: var(--comics-accent);
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+}
+
+.searchInput {
+  width: 180px;
+}
+
+.searchInput::placeholder {
+  color: var(--comics-secondary);
+  opacity: 0.7;
+}
+
+/* Comics Section */
+.comicsSection {
+  width: 100%;
+  padding: 60px 20px;
+  background: var(--comics-primary);
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent);
+  background-size: 40px 40px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: var(--comics-border-medium) dashed var(--comics-secondary);
+}
+
+.sectionTitle {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  text-shadow: var(--comics-shadow);
+  margin: 0 0 15px 0;
+  background-color: var(--comics-accent);
+  display: inline-block;
+  padding: 10px 20px;
+  border: var(--comics-border-medium) solid var(--comics-secondary);
+}
+
+.sectionSubtitle {
+  font-size: 16px;
+  color: var(--comics-secondary);
+  font-weight: 700;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.comicsGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  animation: slideUp 0.6s ease-out;
+}
+
+.comicCardWrapper {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Reviews Section */
+.reviewsSection {
+  width: 100%;
+  padding: 60px 20px;
+  background: var(--comics-primary);
+  border-top: var(--comics-border-thick) solid var(--comics-secondary);
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent);
+  background-size: 40px 40px;
+}
+
+.reviewsGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.reviewCard {
+  background: var(--comics-primary);
+  border: var(--comics-border-thick) solid var(--comics-secondary);
+  padding: 25px;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: slideUp 0.6s ease-out;
+}
+
+.reviewCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.reviewHeader {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.reviewAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  object-fit: cover;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.reviewInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reviewAuthor {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  margin: 0;
+}
+
+.reviewDate {
+  font-size: 12px;
+  color: var(--comics-secondary);
+  opacity: 0.7;
+  font-weight: 700;
+}
+
+.reviewRating {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: var(--comics-border-thin) dashed var(--comics-secondary);
+}
+
+.reviewRating svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ratingValue {
+  font-weight: 900;
+  color: var(--comics-secondary);
+  font-size: 13px;
+  margin-left: auto;
+  background: var(--comics-accent);
+  padding: 3px 8px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+}
+
+.reviewTitle {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  margin: 0 0 10px 0;
+  background: var(--comics-accent);
+  padding: 8px 12px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  display: inline-block;
+  transform: rotate(-1deg);
+}
+
+.reviewContent {
+  font-size: 14px;
+  color: var(--comics-secondary);
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 600;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .filterGroup {
+    gap: 10px;
+  }
+
+  .filterSelect,
+  .searchInput {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .searchInput {
+    width: 150px;
+  }
+
+  .comicsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterSection {
+    padding: 20px 15px;
+  }
+
+  .comicsSection,
+  .reviewsSection {
+    padding: 40px 15px;
+  }
+
+  .comicsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+  }
+
+  .reviewsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+    padding: 8px 12px;
+  }
+
+  .filterGroup {
+    gap: 8px;
+  }
+
+  .filterSelect,
+  .searchInput {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .searchInput {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterSection {
+    padding: 15px 10px;
+  }
+
+  .comicsSection,
+  .reviewsSection {
+    padding: 30px 10px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+    padding: 6px 10px;
+  }
+
+  .sectionSubtitle {
+    font-size: 14px;
+  }
+
+  .comicsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  .reviewsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterGroup {
+    gap: 6px;
+  }
+
+  .filterSelect,
+  .searchInput {
+    padding: 6px 8px;
+    font-size: 9px;
+  }
+
+  .searchInput {
+    width: 100px;
+  }
+
+  .reviewCard {
+    padding: 15px;
+    border: var(--comics-border-medium) solid var(--comics-secondary);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .reviewAvatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .reviewAuthor {
+    font-size: 14px;
+  }
+
+  .reviewTitle {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .reviewContent {
+    font-size: 12px;
+  }
+}

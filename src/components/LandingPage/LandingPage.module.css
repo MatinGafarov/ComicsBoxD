@@ -34,6 +34,7 @@
   color: #fff;
   font-family: "Comic Sans MS", cursive, sans-serif;
   padding: 20px;
+  user-select: none;
 }
 
 /* Başlıq */

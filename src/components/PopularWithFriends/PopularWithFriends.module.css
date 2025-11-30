@@ -1,0 +1,323 @@
+.popularWithFriends {
+  width: 100%;
+  background-color: var(--comics-primary);
+  border-top: var(--comics-border-thick) solid var(--comics-secondary);
+  border-bottom: var(--comics-border-thick) solid var(--comics-secondary);
+  border-left: var(--comics-border-thick) solid var(--comics-secondary);
+  border-right: var(--comics-border-thick) solid var(--comics-secondary);
+  padding: 60px 20px;
+  margin: 20px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: var(--comics-border-medium) dashed var(--comics-secondary);
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  text-shadow: var(--comics-shadow);
+  margin: 0 0 15px 0;
+  background-color: var(--comics-accent);
+  display: inline-block;
+  padding: 10px 20px;
+  border: var(--comics-border-medium) solid var(--comics-secondary);
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--comics-secondary);
+  font-weight: 700;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.grid {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+.grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.grid::-webkit-scrollbar-track {
+  background: var(--comics-primary);
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  border-radius: 4px;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background: var(--comics-secondary);
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  border-radius: 4px;
+}
+
+.grid::-webkit-scrollbar-thumb:hover {
+  background: var(--comics-accent);
+}
+
+/* Card wrapper for fixed width */
+.grid > div {
+  flex: 0 0 160px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.cardWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Friends Rating Badge */
+.friendsRating {
+  background: var(--comics-accent);
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  text-align: center;
+  font-size: 12px;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  transform: rotate(-1deg);
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.friendInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.friendAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  object-fit: cover;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.friendName {
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ratingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding-left: 8px;
+  border-left: var(--comics-border-thin) solid var(--comics-secondary);
+}
+
+.friendsLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.friendsValue {
+  font-size: 14px;
+}
+
+.cardWrapper:hover .friendsRating {
+  transform: rotate(-1deg) scale(1.12);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .popularWithFriends {
+    padding: 50px 15px;
+  }
+
+  .grid > div {
+    flex: 0 0 150px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popularWithFriends {
+    padding: 40px 12px;
+    margin: 15px 0;
+    border: var(--comics-border-medium) solid var(--comics-secondary);
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .grid > div {
+    flex: 0 0 140px;
+  }
+
+  .title {
+    font-size: 28px;
+    padding: 8px 12px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .grid {
+    gap: 12px;
+  }
+
+  .friendsRating {
+    font-size: 11px;
+    padding: 8px;
+    margin-top: 6px;
+  }
+
+  .friendAvatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .friendName {
+    font-size: 11px;
+  }
+
+  .friendsValue {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .popularWithFriends {
+    padding: 30px 10px;
+    margin: 10px 0;
+  }
+
+  .grid > div {
+    flex: 0 0 130px;
+  }
+
+  .title {
+    font-size: 24px;
+    padding: 6px 10px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popularWithFriends {
+    padding: 25px 8px;
+    margin: 8px 0;
+  }
+
+  .grid > div {
+    flex: 0 0 110px;
+  }
+
+  .title {
+    font-size: 20px;
+    padding: 5px 8px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    margin-top: 8px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
+  .grid {
+    gap: 10px;
+    padding: 15px 0;
+  }
+
+  .friendsRating {
+    font-size: 10px;
+    padding: 6px;
+    margin-top: 5px;
+    gap: 8px;
+  }
+
+  .friendAvatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .friendName {
+    font-size: 9px;
+  }
+
+  .ratingSection {
+    gap: 1px;
+    padding-left: 6px;
+  }
+
+  .friendsLabel {
+    font-size: 7px;
+  }
+
+  .friendsValue {
+    font-size: 10px;
+  }
+}

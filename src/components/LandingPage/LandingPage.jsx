@@ -7,7 +7,7 @@ export const LandingPage = () => {
     <section className={styles.hero}>
       <img src={RightBg} className={styles.bg} alt="background" />
       <div className={styles.hero__text}>
-        <h1>Xoş gəlmişsiniz!</h1>
+        <h1>Ilkinim Salamlar</h1>
       </div>
     </section>
   );

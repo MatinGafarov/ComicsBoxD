@@ -1,0 +1,325 @@
+.comicDetailContainer {
+  width: 100%;
+  background: var(--comics-primary);
+  padding: 60px 20px;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent);
+  background-size: 40px 40px;
+  min-height: 100vh;
+}
+
+.backButton {
+  background: var(--comics-accent);
+  color: var(--comics-secondary);
+  border: var(--comics-border-thick) solid var(--comics-secondary);
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  text-shadow: var(--comics-shadow);
+  font-family: var(--comics-font-family);
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  display: inline-block;
+  transform: rotate(-1deg);
+}
+
+.backButton:hover {
+  transform: rotate(-1deg) scale(1.05);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.comicArticle {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--comics-primary);
+  border: var(--comics-border-thick) solid var(--comics-secondary);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: slideUp 0.6s ease-out;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.comicImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comicImage img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border: var(--comics-border-thick) solid var(--comics-secondary);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+.comicContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comicTitle {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  margin: 0 0 10px 0;
+  text-shadow: var(--comics-shadow);
+  letter-spacing: 2px;
+  background: var(--comics-accent);
+  display: inline-block;
+  padding: 15px 30px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  transform: rotate(-2deg);
+}
+
+.comicMeta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 204, 0, 0.1);
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.metaLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--comics-secondary);
+  opacity: 0.7;
+}
+
+.metaValue {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  background: var(--comics-accent);
+  padding: 8px 12px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  display: inline-block;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.descriptionTitle {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  margin: 0 0 15px 0;
+  padding: 10px 15px;
+  background: var(--comics-accent);
+  border: var(--comics-border-medium) solid var(--comics-secondary);
+  display: inline-block;
+  transform: rotate(1deg);
+}
+
+.descriptionText {
+  font-size: 16px;
+  color: var(--comics-secondary);
+  line-height: 1.8;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: var(--comics-border-thin) dashed var(--comics-secondary);
+}
+
+.readBtn,
+.addToListBtn {
+  background: var(--comics-accent);
+  color: var(--comics-secondary);
+  border: var(--comics-border-thick) solid var(--comics-secondary);
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  text-shadow: var(--comics-shadow);
+  font-family: var(--comics-font-family);
+  transition: all 0.3s ease;
+  flex: 1;
+  transform: rotate(-1deg);
+}
+
+.readBtn:hover,
+.addToListBtn:hover {
+  transform: rotate(-1deg) scale(1.05);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.addToListBtn {
+  background: var(--comics-secondary);
+  color: var(--comics-accent);
+  transform: rotate(1deg);
+}
+
+.addToListBtn:hover {
+  transform: rotate(1deg) scale(1.05);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .comicDetailContainer {
+    padding: 40px 15px;
+  }
+
+  .comicArticle {
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .comicTitle {
+    font-size: 36px;
+    padding: 12px 24px;
+  }
+
+  .descriptionText {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comicDetailContainer {
+    padding: 30px 15px;
+  }
+
+  .comicArticle {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 25px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border: var(--comics-border-medium) solid var(--comics-secondary);
+  }
+
+  .comicImage img {
+    max-width: 100%;
+    max-height: 400px;
+  }
+
+  .comicTitle {
+    font-size: 28px;
+    padding: 10px 18px;
+  }
+
+  .comicMeta {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .metaValue {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .descriptionTitle {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+
+  .descriptionText {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .readBtn,
+  .addToListBtn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comicDetailContainer {
+    padding: 20px 10px;
+  }
+
+  .backButton {
+    padding: 10px 16px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .comicArticle {
+    padding: 15px;
+    gap: 15px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .comicTitle {
+    font-size: 22px;
+    padding: 8px 16px;
+  }
+
+  .comicMeta {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .metaLabel {
+    font-size: 10px;
+  }
+
+  .metaValue {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .descriptionTitle {
+    font-size: 18px;
+    padding: 6px 10px;
+  }
+
+  .descriptionText {
+    font-size: 12px;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .readBtn,
+  .addToListBtn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}

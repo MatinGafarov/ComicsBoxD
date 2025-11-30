@@ -1,0 +1,206 @@
+.newsPageContainer {
+  width: 100%;
+  background: var(--comics-primary);
+  padding: 60px 20px;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 76%, transparent 77%, transparent);
+  background-size: 40px 40px;
+  min-height: 100vh;
+}
+
+.backButton {
+  background: var(--comics-accent);
+  color: var(--comics-secondary);
+  border: var(--comics-border-thick) solid var(--comics-secondary);
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  text-shadow: var(--comics-shadow);
+  font-family: var(--comics-font-family);
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  display: inline-block;
+  transform: rotate(-1deg);
+}
+
+.backButton:hover {
+  transform: rotate(-1deg) scale(1.05);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.newsArticle {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--comics-primary);
+  border: var(--comics-border-thick) solid var(--comics-secondary);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: slideUp 0.6s ease-out;
+}
+
+.heroImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-bottom: var(--comics-border-thick) solid var(--comics-secondary);
+}
+
+.content {
+  padding: 40px;
+}
+
+.headline {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  margin: 0 0 20px 0;
+  text-shadow: var(--comics-shadow);
+  letter-spacing: 2px;
+  background: var(--comics-accent);
+  display: inline-block;
+  padding: 15px 30px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  transform: rotate(-2deg);
+}
+
+.meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--comics-secondary);
+  font-size: 14px;
+  border-bottom: var(--comics-border-thin) solid var(--comics-secondary);
+  padding-bottom: 15px;
+}
+
+.date {
+  background: var(--comics-accent);
+  padding: 5px 12px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+}
+
+.readTime {
+  background: var(--comics-secondary);
+  color: var(--comics-primary);
+  padding: 5px 12px;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+}
+
+.articleContent {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--comics-secondary);
+  margin-top: 30px;
+}
+
+.articleContent p {
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.subheading {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--comics-secondary);
+  margin: 40px 0 20px 0;
+  padding: 10px 15px;
+  background: var(--comics-accent);
+  border: var(--comics-border-medium) solid var(--comics-secondary);
+  display: inline-block;
+  transform: rotate(1deg);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsPageContainer {
+    padding: 40px 15px;
+  }
+
+  .newsArticle {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .heroImage {
+    height: 300px;
+  }
+
+  .content {
+    padding: 25px;
+  }
+
+  .headline {
+    font-size: 32px;
+    padding: 12px 24px;
+  }
+
+  .articleContent {
+    font-size: 14px;
+  }
+
+  .subheading {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsPageContainer {
+    padding: 20px 10px;
+  }
+
+  .backButton {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .newsArticle {
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+    border: var(--comics-border-medium) solid var(--comics-secondary);
+  }
+
+  .heroImage {
+    height: 200px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .headline {
+    font-size: 24px;
+    padding: 10px 18px;
+  }
+
+  .meta {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .articleContent {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .subheading {
+    font-size: 18px;
+    padding: 7px 10px;
+  }
+}
