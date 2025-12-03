@@ -250,6 +250,12 @@
     width: 100%;
   }
 
+  .instagramLink {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   .profileAvatar {
     width: 100px;
     height: 100px;
@@ -358,6 +364,8 @@
   .profileInfo {
     gap: 12px;
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
   .profileAvatar {
@@ -375,6 +383,9 @@
 
   .instagramLink {
     font-size: 11px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
   }
 
   .editBtn {

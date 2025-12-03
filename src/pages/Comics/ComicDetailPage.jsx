@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from './ComicDetailPage.module.css';
 
 export const ComicDetailPage = () => {
@@ -65,6 +65,10 @@ export const ComicDetailPage = () => {
 
   const comic = comicData[id] || comicData[1];
 
+  const handleAddToList = () => {
+    navigate('/profile?tab=lists');
+  };
+
   return (
     <div className={styles.comicDetailContainer}>
       <button className={styles.backButton} onClick={() => navigate(-1)}>
@@ -112,7 +116,7 @@ export const ComicDetailPage = () => {
           </div>
 
           <div className={styles.actionButtons}>
-            <button className={styles.addToListBtn}>Add to List</button>
+            <button className={styles.addToListBtn} onClick={handleAddToList}>Add to List</button>
           </div>
         </div>
       </article>

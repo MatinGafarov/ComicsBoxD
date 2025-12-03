@@ -1,11 +1,21 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import styles from './ProfilePage.module.css';
 import { ComicCard } from '../../components/ComicCard/ComicCard';
 
 export const ProfilePage = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState('favorites');
+
+  useEffect(() => {
+    const tabParam = searchParams.get('tab');
+    if (tabParam === 'lists') {
+      setActiveTab('lists');
+    } else {
+      setActiveTab('favorites');
+    }
+  }, [searchParams]);
 
   const userProfile = {
     name: 'Matin',

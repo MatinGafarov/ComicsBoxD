@@ -3,7 +3,7 @@ import {
     Route,
     Routes,
     BrowserRouter,
-} from "react-router"
+} from "react-router-dom"
 
 // Pages
 import { HomePage } from "@/pages/Home/HomePage"
