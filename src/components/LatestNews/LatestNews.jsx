@@ -12,7 +12,7 @@ export const LatestNews = () => {
           <img src={ilkinImage} alt="Latest News" className={styles.newsImage} />
           <div className={styles.newsContent}>
             <h3 className={styles.newsTitle}>Ilkin</h3>
-            <p className={styles.newsDescription}>Seher tezden oyanir abdest pozur gedir ise gelir kursa gedir goruse gelir stranger thingse</p>
+            <p className={styles.newsDescription}>sirin seker oglan</p>
             <Link to="/news/1" className={styles.readMoreLink}>
               Read More →
             </Link>

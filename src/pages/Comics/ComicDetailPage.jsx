@@ -112,7 +112,6 @@ export const ComicDetailPage = () => {
           </div>
 
           <div className={styles.actionButtons}>
-            <button className={styles.readBtn}>Read Now</button>
             <button className={styles.addToListBtn}>Add to List</button>
           </div>
         </div>

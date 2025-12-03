@@ -1,0 +1,486 @@
+.profileContainer {
+  min-height: 100vh;
+  background-color: var(--comics-primary);
+  padding: 30px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Profile Header */
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  background-color: var(--comics-primary);
+  padding: 30px;
+  border-bottom: var(--comics-border-thick) solid var(--comics-secondary);
+  border: var(--comics-border-thick) solid var(--comics-secondary);
+  box-shadow: var(--comics-shadow);
+}
+
+.profileInfo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+}
+
+.profileAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: var(--comics-border-medium) solid var(--comics-accent);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.userName {
+  font-size: 32px;
+  font-weight: 900;
+  font-family: var(--comics-font-family);
+  color: var(--comics-secondary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.userBio {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--comics-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.instagramLink {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--comics-secondary);
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+  transition: all 0.2s ease;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  padding: 4px 8px;
+}
+
+.instagramLink:hover {
+  background-color: var(--comics-secondary);
+  color: var(--comics-primary);
+}
+
+.editBtn {
+  padding: 12px 24px;
+  background-color: var(--comics-primary);
+  color: var(--comics-secondary);
+  border: var(--comics-border-medium) solid var(--comics-secondary);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--comics-font-family);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: fit-content;
+}
+
+.editBtn:hover {
+  background-color: var(--comics-secondary);
+  color: var(--comics-primary);
+  transform: scale(1.05);
+}
+
+.editBtn:active {
+  transform: scale(0.98);
+}
+
+/* Stats Section */
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.statCard {
+  background-color: var(--comics-primary);
+  padding: 20px;
+  text-align: center;
+  border-bottom: var(--comics-border-thin) solid var(--comics-secondary);
+  transition: all 0.2s ease;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+  cursor: pointer;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.statCard:hover {
+  background-color: var(--comics-secondary);
+  border: var(--comics-border-medium) solid var(--comics-secondary);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 900;
+  font-family: var(--comics-font-family);
+  color: var(--comics-accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.statCard:hover .statValue {
+  color: var(--comics-primary);
+}
+
+.statLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--comics-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statCard:hover .statLabel {
+  color: var(--comics-primary);
+}
+
+/* Tabs */
+.tabsContainer {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  border-bottom: var(--comics-border-thin) solid var(--comics-secondary);
+  padding-bottom: 15px;
+}
+
+.tabBtn {
+  padding: 8px 0;
+  background-color: transparent;
+  color: var(--comics-secondary);
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--comics-font-family);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tabBtn:hover {
+  color: var(--comics-secondary);
+}
+
+.tabBtn.active {
+  color: var(--comics-accent);
+}
+
+.tabBtn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  height: var(--comics-border-thin);
+  background-color: var(--comics-accent);
+}
+
+/* Comics Grid */
+.comicsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Lists Grid */
+.listsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.listCard {
+  background-color: var(--comics-primary);
+  overflow: hidden;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
+}
+
+.listCard:hover {
+  transform: translate(-2px, -2px);
+  border-color: var(--comics-accent);
+  border: var(--comics-border-medium) solid var(--comics-secondary);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.listImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.listTitle {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--comics-font-family);
+  color: var(--comics-secondary);
+  padding: 12px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.listCount {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--comics-secondary);
+  padding: 0 12px 12px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .profileHeader {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profileInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .profileAvatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .userName {
+    font-size: 26px;
+  }
+
+  .statsSection {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .statValue {
+    font-size: 24px;
+  }
+
+  .comicsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .listsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 20px 15px;
+  }
+
+  .profileHeader {
+    padding: 20px;
+  }
+
+  .profileAvatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .userName {
+    font-size: 24px;
+  }
+
+  .userBio {
+    font-size: 12px;
+  }
+
+  .editBtn {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+
+  .statsSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .statCard {
+    padding: 15px;
+  }
+
+  .statValue {
+    font-size: 22px;
+  }
+
+  .statLabel {
+    font-size: 11px;
+  }
+
+  .tabsContainer {
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
+  .tabBtn {
+    font-size: 13px;
+  }
+
+  .comicsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .listsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .profileContainer {
+    padding: 15px;
+  }
+
+  .profileHeader {
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .profileInfo {
+    gap: 12px;
+    width: 100%;
+  }
+
+  .profileAvatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .userName {
+    font-size: 20px;
+  }
+
+  .userBio {
+    font-size: 11px;
+  }
+
+  .instagramLink {
+    font-size: 11px;
+  }
+
+  .editBtn {
+    padding: 10px 16px;
+    font-size: 11px;
+    width: 100%;
+  }
+
+  .statsSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .statCard {
+    padding: 12px;
+  }
+
+  .statValue {
+    font-size: 20px;
+  }
+
+  .statLabel {
+    font-size: 10px;
+  }
+
+  .tabsContainer {
+    gap: 15px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+  }
+
+  .tabBtn {
+    font-size: 12px;
+  }
+
+  .comicsGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .listsGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .listTitle {
+    font-size: 14px;
+    padding: 10px 12px 3px;
+  }
+
+  .listCount {
+    font-size: 11px;
+    padding: 0 12px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileAvatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .userName {
+    font-size: 18px;
+  }
+
+  .statValue {
+    font-size: 18px;
+  }
+
+  .statLabel {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 320px) {
+  .profileContainer {
+    padding: 10px;
+  }
+
+  .profileHeader {
+    padding: 10px;
+  }
+
+  .profileAvatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .userName {
+    font-size: 16px;
+  }
+
+  .userBio {
+    font-size: 10px;
+  }
+
+  .statValue {
+    font-size: 16px;
+  }
+}

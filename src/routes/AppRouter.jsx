@@ -15,6 +15,7 @@ import { ActivityPage } from "@/pages/Activity/ActivityPage"
 import { ReviewOrLogPage } from "@/pages/ReviewOrLog/ReviewOrLogPage"
 import { NewsPage } from "@/pages/News/NewsPage"
 import { ComicDetailPage } from "@/pages/Comics/ComicDetailPage"
+import { ProfileEditPage } from "@/pages/Profile/ProfileEditPage"
 
 // Layouts
 import { MainLayout } from "@/components/layouts/MainLayout/MainLayout"
@@ -34,6 +35,7 @@ export const AppRouter = () => {
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/news/:newsId" element={<NewsPage />} />
                     <Route path="/comic/:id" element={<ComicDetailPage />} />
+                    <Route path="/profile-edit" element={<ProfileEditPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>
