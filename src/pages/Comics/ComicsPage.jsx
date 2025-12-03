@@ -35,7 +35,7 @@ export const ComicsPage = () => {
     },
     {
       id: 3,
-      image: "https://via.placeholder.com/200x300?text=Comic+3",
+      image: "https://cdn.marvel.com/content/2x/marvoicesleg2024001_cover_0.jpg",
       title: "Superhero Legends",
       rating: 4.2,
       author: "Mike Johnson",
@@ -44,7 +44,7 @@ export const ComicsPage = () => {
     },
     {
       id: 4,
-      image: "https://via.placeholder.com/200x300?text=Comic+4",
+      image: "https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Secret_Origins_TPB.jpg/250px-Secret_Origins_TPB.jpg",
       title: "Secret Origins",
       rating: 4.6,
       author: "Sarah Lee",
@@ -53,7 +53,7 @@ export const ComicsPage = () => {
     },
     {
       id: 5,
-      image: "https://via.placeholder.com/200x300?text=Comic+5",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxP7nI7Wx2KYJvN6OvCP9w2ic8q30g1pWohg&s",
       title: "Justice Warriors",
       rating: 4.3,
       author: "Tom Wilson",
@@ -62,7 +62,7 @@ export const ComicsPage = () => {
     },
     {
       id: 6,
-      image: "https://via.placeholder.com/200x300?text=Comic+6",
+      image: "https://m.media-amazon.com/images/I/61S6QQSX57L._AC_UF894,1000_QL80_.jpg",
       title: "Cosmic Adventures",
       rating: 4.7,
       author: "Emma White",
@@ -71,7 +71,7 @@ export const ComicsPage = () => {
     },
     {
       id: 7,
-      image: "https://via.placeholder.com/200x300?text=Comic+7",
+      image: "https://m.media-amazon.com/images/I/61S6QQSX57L._AC_UF894,1000_QL80_.jpg",
       title: "Legend of Heroes",
       rating: 4.4,
       author: "Chris Davis",
@@ -80,7 +80,7 @@ export const ComicsPage = () => {
     },
     {
       id: 8,
-      image: "https://via.placeholder.com/200x300?text=Comic+8",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxP7nI7Wx2KYJvN6OvCP9w2ic8q30g1pWohg&s",
       title: "Epic Battles",
       rating: 4.9,
       author: "Lisa Anderson",

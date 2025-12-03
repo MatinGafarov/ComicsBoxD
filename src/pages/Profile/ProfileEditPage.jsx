@@ -7,7 +7,7 @@ export const ProfileEditPage = () => {
   const [formData, setFormData] = useState({
     name: 'Matin',
     bio: 'Comic enthusiast & collector',
-    instagram: '@matin_comics',
+    instagram: '@matin_gafarov',
     avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ9F5m_XH1BhsoQSY8-lcS6iyEZNi13TYwPw&s'
   });
 

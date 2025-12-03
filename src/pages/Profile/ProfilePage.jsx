@@ -11,45 +11,45 @@ export const ProfilePage = () => {
     name: 'Matin',
     avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ9F5m_XH1BhsoQSY8-lcS6iyEZNi13TYwPw&s',
     bio: 'Comic enthusiast & collector',
-    instagram: 'https://instagram.com'
+    instagram: '@matin_gafarov'
   };
 
   const favoriteComics = [
     {
       id: 1,
-      image: 'https://via.placeholder.com/200x300?text=Comic+1',
-      title: 'The Amazing Spider-Man',
+      image: 'https://cdn.marvel.com/u/prod/marvel/i/mg/c/b0/536d78dd5aeb4/clean.jpg',
+      title: 'The Amazing Adventures',
       rating: 4.5,
-      author: 'Stan Lee',
-      year: 2023,
-      ratedCount: 156
+      author: 'John Doe',
+      year: 2024,
+      ratedCount: 328
     },
     {
       id: 2,
-      image: 'https://via.placeholder.com/200x300?text=Comic+2',
-      title: 'Batman: Dark Knight',
+      image: 'https://m.media-amazon.com/images/M/MV5BZWQwNjViNzUtZjdiMS00NWFiLWE0YjUtNjRlZTU3YjMwMzgyXkEyXkFqcGc@._V1_.jpg',
+      title: 'Dark Knights Chronicles',
       rating: 4.8,
-      author: 'Frank Miller',
-      year: 2023,
-      ratedCount: 203
+      author: 'Jane Smith',
+      year: 2024,
+      ratedCount: 512
     },
     {
       id: 3,
-      image: 'https://via.placeholder.com/200x300?text=Comic+3',
-      title: 'X-Men: Legacy',
+      image: 'https://cdn.marvel.com/content/2x/marvoicesleg2024001_cover_0.jpg',
+      title: 'Superhero Legends',
       rating: 4.2,
-      author: 'Chris Claremont',
-      year: 2022,
-      ratedCount: 142
+      author: 'Mike Johnson',
+      year: 2023,
+      ratedCount: 245
     },
     {
       id: 4,
-      image: 'https://via.placeholder.com/200x300?text=Comic+4',
-      title: 'Avengers Assemble',
+      image: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Secret_Origins_TPB.jpg/250px-Secret_Origins_TPB.jpg',
+      title: 'Secret Origins',
       rating: 4.6,
-      author: 'Joss Whedon',
-      year: 2023,
-      ratedCount: 187
+      author: 'Sarah Lee',
+      year: 2024,
+      ratedCount: 389
     }
   ];
 
@@ -58,37 +58,37 @@ export const ProfilePage = () => {
       id: 1,
       title: 'Superhero Classics',
       count: 24,
-      image: 'https://via.placeholder.com/150x150?text=List+1'
+      image: 'https://cdn.marvel.com/u/prod/marvel/i/mg/c/b0/536d78dd5aeb4/clean.jpg'
     },
     {
       id: 2,
       title: 'Dark & Mysterious',
       count: 18,
-      image: 'https://via.placeholder.com/150x150?text=List+2'
+      image: 'https://m.media-amazon.com/images/M/MV5BZWQwNjViNzUtZjdiMS00NWFiLWE0YjUtNjRlZTU3YjMwMzgyXkEyXkFqcGc@._V1_.jpg'
     },
     {
       id: 3,
       title: 'Indie Gems',
       count: 12,
-      image: 'https://via.placeholder.com/150x150?text=List+3'
+      image: 'https://cdn.marvel.com/content/2x/marvoicesleg2024001_cover_0.jpg'
     },
     {
       id: 4,
       title: 'Must Read',
       count: 31,
-      image: 'https://via.placeholder.com/150x150?text=List+4'
+      image: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Secret_Origins_TPB.jpg/250px-Secret_Origins_TPB.jpg'
     },
     {
       id: 5,
       title: 'Wishlist',
       count: 45,
-      image: 'https://via.placeholder.com/150x150?text=List+5'
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxP7nI7Wx2KYJvN6OvCP9w2ic8q30g1pWohg&s'
     },
     {
       id: 6,
       title: 'Completed',
       count: 156,
-      image: 'https://via.placeholder.com/150x150?text=List+6'
+      image: 'https://m.media-amazon.com/images/I/61S6QQSX57L._AC_UF894,1000_QL80_.jpg'
     }
   ];
 
@@ -110,7 +110,7 @@ export const ProfilePage = () => {
             <h1 className={styles.userName}>{userProfile.name}</h1>
             <p className={styles.userBio}>{userProfile.bio}</p>
             <a href={userProfile.instagram} target="_blank" rel="noopener noreferrer" className={styles.instagramLink}>
-              @matin_comics
+              @matin_gafarov
             </a>
           </div>
         </div>

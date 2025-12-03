@@ -112,7 +112,7 @@
   padding: 20px;
   text-align: center;
   border-bottom: var(--comics-border-thin) solid var(--comics-secondary);
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, border 0.2s ease;
   border: var(--comics-border-thin) solid var(--comics-secondary);
   cursor: pointer;
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
@@ -121,8 +121,6 @@
 .statCard:hover {
   background-color: var(--comics-secondary);
   border: var(--comics-border-medium) solid var(--comics-secondary);
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .statValue {
@@ -153,41 +151,36 @@
 /* Tabs */
 .tabsContainer {
   display: flex;
-  gap: 30px;
+  gap: 15px;
   margin-bottom: 30px;
-  border-bottom: var(--comics-border-thin) solid var(--comics-secondary);
-  padding-bottom: 15px;
+  padding-bottom: 0;
 }
 
 .tabBtn {
-  padding: 8px 0;
-  background-color: transparent;
+  padding: 12px 20px;
+  background-color: var(--comics-primary);
   color: var(--comics-secondary);
-  border: none;
+  border: var(--comics-border-thin) solid var(--comics-secondary);
   font-size: 14px;
   font-weight: 700;
   font-family: var(--comics-font-family);
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 .tabBtn:hover {
-  color: var(--comics-secondary);
+  background-color: var(--comics-secondary);
+  color: var(--comics-primary);
+  border: var(--comics-border-medium) solid var(--comics-secondary);
 }
 
 .tabBtn.active {
-  color: var(--comics-accent);
-}
-
-.tabBtn.active::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  right: 0;
-  height: var(--comics-border-thin);
-  background-color: var(--comics-accent);
+  background-color: var(--comics-secondary);
+  color: var(--comics-primary);
+  border: var(--comics-border-medium) solid var(--comics-secondary);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Comics Grid */
